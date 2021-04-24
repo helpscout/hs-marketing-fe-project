@@ -1,29 +1,29 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import styled from 'styled-components';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Container from '../components/Container/Container';
+import Layout from '../components/Layout/Layout';
+import Seo from '../components/Seo/Seo';
 
-const IndexPage = () => (
+const HomePageContentDIV = styled.div`
+  padding: 100px 0;
+  width: 100%;
+  max-width: 700px;
+`;
+
+const HomePage = () => (
   <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
+    <Seo
+      description="This is the Help Scout home page"
+      title="Help Scout | Home Page"
     />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Container>
+      <HomePageContentDIV>
+        <h1 className="display">Simplified customer&nbsp;service</h1>
+        <p className="text-large">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
+      </HomePageContentDIV>
+    </Container>
   </Layout>
-)
+);
 
-export default IndexPage
+export default HomePage;

@@ -1,8 +1,15 @@
+const footerNav = require('./content/siteMetadata/footerNav')
+const mainNav = require('./content/siteMetadata/mainNav')
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Help Scout`,
+    description: `Make every customer service interaction a more human one. Use Help Scout. Trusted by over 12,000 businesses in 140 countries. Get started for free.`,
+    author: `Help Scout`,
+    twitter: `@helpscout`,
+    siteUrl: 'https://www.helpscout.com',
+    footerNav,
+    mainNav,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +17,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `static`,
+        path: `${__dirname}/static`,
+        ignore: [
+          `**/fonts/*`,
+        ],
       },
     },
     `gatsby-transformer-sharp`,
