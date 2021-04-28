@@ -1,6 +1,6 @@
 # 💪 Challenge
 
-Review the [design spec](./specs/contentful-blog-webinar.md) to see your task.
+Review the [requirements](./requirements.md) to see your task.
 
 This challenge will incorporate your knowledge of JavaScript and CSS, as well as your confidence navigating existing systems and frameworks.
 
