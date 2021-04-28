@@ -33,8 +33,7 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
     ├── content
     ├── src
         ├── components
-        ├── pages
-        └── templates
+        └── pages
     ├── static
         ├── fonts
         └── images
@@ -56,7 +55,7 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
 
     1. **`/src/components`**: This directory contains all of the resuable React components we can use to build pages.
 
-    1. **`/src/pages`**: This directory contains all standalone pages that are not programmatically created in `gatsby-node.js`. The folder structure maps directly to the URL structure.
+    1. **`/src/pages`**: This directory contains page components. The folder structure maps directly to the URL structure.
 
 1. **`/static`**: This directory contains all static files necessary.
 
