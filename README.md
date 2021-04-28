@@ -49,7 +49,7 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
     ├── package.json
     └── README.md
 
-1. **`/content`**: This directory contains all content data for the site, organized by folder by type. The CMS will save content to this folder (settings are in `static/admin/config.yml`).
+1. **`/content`**: This directory contains all content data for the site, organized by folder by type.
 
 1. **`/src`**: This directory contains all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
