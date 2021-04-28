@@ -2,9 +2,9 @@
 
 Review the [requirements](./requirements.md) to see your task.
 
-This challenge will incorporate your knowledge of JavaScript and CSS, as well as your confidence navigating existing systems and frameworks.
+This challenge will incorporate your knowledge of JavaScript and CSS, as well as your skills navigating existing systems and frameworks.
 
-The goal is to complete everything listed under "Requirements" in the design spec. If you finish, feel free to tackle the items under "Nice to have".
+The goal is to complete everything in the "Project Requirements" specifications.
 
 You have **6 hours** to complete this task. Please stick to this time limit.
 
