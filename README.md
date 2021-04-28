@@ -27,14 +27,10 @@ npm install
 
 This project is built using the Gatsby static site generator framework. Here's what inside:
 
-A quick look at the top-level files and directories you'll see in the `hs-marketing-cms` project:
+A quick look at the top-level files and directories you'll see in `hs-marketing-fe-project`:
 
     .
-    ├── cms
-    ├── config
     ├── content
-    ├── creators
-    ├── scripts
     ├── src
         ├── components
         ├── pages
@@ -53,15 +49,7 @@ A quick look at the top-level files and directories you'll see in the `hs-market
     ├── package.json
     └── README.md
 
-1. **`/cms`**: This directory contains configuration files for NetlifyCMS. These configuration files control how (and which) widgets/components are displayed and saved in the CMS content editor. For example, the `callout` component, the `cta` component, etc.
-
-1. **`/config`**: This directory contains configuration files for Gatsby plugins which are included in `gatsby-config.js`.
-
 1. **`/content`**: This directory contains all content data for the site, organized by folder by type. The CMS will save content to this folder (settings are in `static/admin/config.yml`).
-
-1. **`/creators`**: This directory contains scripts which are used in `gatsby-node.js` to programmatically create pages from content data. For example, `BlogPostCreators`, etc.
-
-1. **`/scripts`**: This directory contains some utility scripts that can be used to convert older html-based components into new React-based components with shortcodes. This folder will be deleted after all content has been migrated.
 
 1. **`/src`**: This directory contains all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
