@@ -40,14 +40,15 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
         └── images
     ├── .gitignore
     ├── .prettierrc
+    ├── challenge.md
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
-    ├── LICENSE
     ├── package-lock.json
     ├── package.json
-    └── README.md
+    ├── README.md
+    └── requirements.md
 
 1. **`/content`**: This directory contains all content data for the site, organized by folder by type.
 
@@ -67,6 +68,8 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
 
 1. **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
+1. **`challenge.md`**: Details on how to complete the take-home project challenge!
+
 1. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
 1. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
@@ -80,6 +83,8 @@ A quick look at the top-level files and directories you'll see in `hs-marketing-
 1. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 1. **`README.md`**: A text file containing useful reference information about your project. (You're reading it right now).
+
+1. **`requirements.md`**: Requirements and design details for the take-home project.
 
 ## 🕹 Development
 
