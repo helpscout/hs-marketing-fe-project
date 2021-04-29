@@ -1,4 +1,4 @@
-# 💪 Challenge
+# Challenge
 
 Review the [requirements](./requirements.md) to see your task.
 
