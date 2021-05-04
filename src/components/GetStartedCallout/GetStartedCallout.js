@@ -48,6 +48,25 @@ const GetStartedCallout = ({
         />
       </>
     )}
+    {theme === GET_STARTED_CALLOUT_THEMES.ILLO && (
+      <>
+        <img
+          alt=""
+          className="illo illo--clouds"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-top-left.png"
+        />
+        <img
+          alt=""
+          className="illo illo--clouds--2"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-top-left.png"
+        />
+        <img
+          alt=""
+          className="illo illo--sculpture"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-bottom-right.png"
+        />
+      </>
+    )}
   </GetStartedCalloutDIV>
 );
 
