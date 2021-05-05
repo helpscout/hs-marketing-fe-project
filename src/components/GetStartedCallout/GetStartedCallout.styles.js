@@ -93,6 +93,11 @@ export const GetStartedCalloutDIV = styled.div`
           background: 'none';
           text-align:left;
 
+          @media (max-width: ${BREAKPOINTS.M}) {
+            padding: 10px 0 250px 0; /* make space for museum image in mobile */
+          }
+
+
           ${GetStartedCalloutContentWrapperDIV} {
             z-index: 1;
             margin-top:40px;
@@ -107,8 +112,6 @@ export const GetStartedCalloutDIV = styled.div`
             })}
           }
 
-
-
           .museum {
             position: absolute !important;
             z-index: -1;
@@ -117,12 +120,19 @@ export const GetStartedCalloutDIV = styled.div`
               top: 0;
               left: 0;
               width:25%;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                left:4%
+              }
             }
 
             &.museum-bottom-right {
               bottom: 0;
               right: 0;
               width: 50%;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                width:60%
+              }
+
             }
           }
         `;

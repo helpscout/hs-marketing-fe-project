@@ -7,47 +7,76 @@ import { getColor } from '../../../utils';
 
 
 export const IntegrationCalloutDIV = styled.div`
-  width:378px;
-  height:auto;
+  max-width:378px;
+  width:30%;
+  height:312px;
   position:relative;
   pointer-events:auto;
   background-color:#fff;
+  text-align:center;
   border-radius:6px;
   display:flex;
   flex-direction:column;
   box-shadow: 0px 5px 10px 0px rgba(7, 30, 87, 0.10);
   transition: transform 0.15s ease-in-out;
-
-  /* darker drop shadow to be revealed on hover */
-  &::after {
-      opacity: 0;
-      position:absolute;
-      border-radius:6px;
-      top:0;
-      width:100%;
-      height:100%;
-      content:'';
-      background-color:(0,0,0,0.0);
-      box-shadow: 0px 20px 30px 0px rgba(7, 30, 87, 0.20);
-      transition: opacity 0.15s cubic-bezier(0.87, 0, 0.13, 1);
-      pointer-events:none;
+  overflow:hidden;
+  &:hover {
+      .btn-wrapper {
+          background-color: ${getColor('ASH', 200)};
+        } 
     }
 
-   &:hover {
-    transform:translateY(-1%) scale(1.05);
+/* extra small */
+  @media (max-width: ${BREAKPOINTS.S}) {
+    height:256px;
+  }
+    
+/* small */
+  @media (max-width: ${BREAKPOINTS.M}) {
+    width:100%;
+    max-width:100%;
+    height:250px;
+    margin-bottom:30px;
+  }
 
-     .btn-wrapper {
-      background-color: ${getColor('ASH', 200)};
+  
+/* large */
+  @media (min-width: ${BREAKPOINTS.M}) {
+
+    /* darker drop shadow to be revealed on hover */
+    &::after {
+        opacity: 0;
+        position:absolute;
+        border-radius:6px;
+        top:0;
+        width:100%;
+        height:100%;
+        content:'';
+        background-color:(0,0,0,0.0);
+        box-shadow: 0px 20px 30px 0px rgba(7, 30, 87, 0.20);
+        transition: opacity 0.15s cubic-bezier(0.87, 0, 0.13, 1);
+        pointer-events:none;
+      }
+
+    &:hover {
+      transform:translateY(-1%) scale(1.05);
+    }
+
+    &:hover::after {
+      opacity: 1;
     } 
   }
 
-  &:hover::after {
-    opacity: 1;
-  } 
 `;
 
 export const IntegrationCalloutContentDIV = styled.div`
+  flex-grow:1;
+
   margin: 20px 36.5px 0 36.5px;
+  @media (max-width: ${BREAKPOINTS.M}) {
+    margin-top:10px;
+  }
+
 `;
 
 export const PillWrapperDIV = styled.div`
@@ -69,6 +98,20 @@ export const IntegrationCalloutImgWrapper = styled.div`
   height:100px;
   margin:0 auto 10px auto;
 
+  /* extra small */
+  @media (max-width: ${BREAKPOINTS.S}) {
+    height:60px;
+    width:150px;
+    margin-top:-10px;
+  }
+
+  /* small */
+  @media (min-width: ${BREAKPOINTS.S}) {
+    width:150px;
+    height:80px;
+    margin-top:-10px;
+  }
+
   img {
     width:100%;
     height:auto;
@@ -79,10 +122,11 @@ export const IntegrationCalloutImgWrapper = styled.div`
 
 export const IntegrationCalloutBtnWrapperDIV = styled.div`
   width:100%;
-  height:100%;
-  margin-top:40px;
-  flex-grow:1;
+  height:58px;
   border-top: 1px solid ${getColor('ASH', 300)};
+  @media (max-width: ${BREAKPOINTS.M}) {
+    margin-top:10px;
+  }
 `;
 
 export const IntegrationCalloutBtn = styled.a`

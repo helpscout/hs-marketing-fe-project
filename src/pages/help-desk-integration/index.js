@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../../components/Container/Container';
+import { BREAKPOINTS } from '../../constants';
 import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
 import { GET_STARTED_CALLOUT_THEMES } from '../../components/GetStartedCallout/GetStartedCallout.constants.js';
@@ -28,12 +29,22 @@ const IntegrationHeroBg = styled.div`
   right:0;
   background:url(${HeroImage}) no-repeat 122% top;
   background-size: 60%;
+  @media (max-width: 1090px) {
+    background-size: 46%;
+  }
+  @media (max-width: ${BREAKPOINTS.L}) {
+    display:none;
+  }
 `;
 
 const IntegrationPageContentDIV = styled.div`
   padding: 100px 0;
   width: 100%;
   max-width: 700px;
+  @media (max-width: ${BREAKPOINTS.M}) {
+    padding: 30px 0;
+  }
+  
 `;
 
 

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
+import { BREAKPOINTS } from '../../constants';
+
 
 import IntegrationCallout from './IntegrationCallout/IntegrationCallout'
 
@@ -9,7 +11,15 @@ const IntegrationCalloutListDIV = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-bottom:110px;
+  margin:0 auto 110px auto;
+
+  @media (max-width: ${BREAKPOINTS.M}) {
+    width: 100%;
+    max-width: 700px;
+    flex-direction:column;
+    margin-bottom:40px;
+  }
+
 `;
 
 const IntegrationCalloutList = () => {
