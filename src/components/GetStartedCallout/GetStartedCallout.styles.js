@@ -18,9 +18,9 @@ export const GetStartedCalloutContentDIV = styled.div`
     M: 8,
     L: 6,
     offsetM: 2,
-    offsetL: 3,
+    offsetL: 3, 
   })}
-  text-align: center;
+
 
   p {
     color: ${getColor('CHARCOAL', 400)};
@@ -45,8 +45,9 @@ export const GetStartedCalloutContentDIV = styled.div`
 `;
 
 export const GetStartedCalloutDIV = styled.div`
-  background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
-  padding: 60px 0;
+
+   padding: 60px 0;
+
 
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;
@@ -54,11 +55,14 @@ export const GetStartedCalloutDIV = styled.div`
 
   ${({ theme }) => {
     switch (theme) {
+    
+      case GET_STARTED_CALLOUT_THEMES.DEFAULT:
       case GET_STARTED_CALLOUT_THEMES.INDIGO:
         return css`
           position: relative;
-          background: linear-gradient(180deg, #F7F9FD 0%, rgba(247, 249, 253, 0) 100%);
-
+          background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
+          text-align:center;
+        
           ${GetStartedCalloutContentWrapperDIV} {
             position: relative;
             z-index: 1;
@@ -79,6 +83,56 @@ export const GetStartedCalloutDIV = styled.div`
             &.brush-bottom-left {
               bottom: 0;
               left: 0;
+            }
+          }
+        `;
+
+        case GET_STARTED_CALLOUT_THEMES.ILLO:
+          return css`
+          position: relative;
+          background: 'none';
+          text-align:left;
+
+          @media (max-width: ${BREAKPOINTS.M}) {
+            padding: 10px 0 250px 0; /* make space for museum image in mobile */
+          }
+
+
+          ${GetStartedCalloutContentWrapperDIV} {
+            z-index: 1;
+            margin-top:40px;
+          }
+
+          ${GetStartedCalloutContentDIV} {
+            ${getColumnCSS({
+              M: 8,
+              L: 6,
+              offsetM: 1,
+              offsetL: 1, 
+            })}
+          }
+
+          .museum {
+            position: absolute !important;
+            z-index: -1;
+           
+            &.museum-top-left {
+              top: 0;
+              left: 2%;
+              width:25%;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                left:4%
+              }
+            }
+
+            &.museum-bottom-right {
+              bottom: 0;
+              right: 0;
+              width: 50%;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                width:60%
+              }
+
             }
           }
         `;

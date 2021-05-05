@@ -17,6 +17,7 @@ import {
   GET_STARTED_DEFAULT_TITLE,
 } from './GetStartedCallout.constants';
 
+
 const GetStartedCallout = ({
   ctaText = GET_STARTED_DEFAULT_CTA_TEXT,
   theme = GET_STARTED_CALLOUT_THEMES.DEFAULT,
@@ -45,6 +46,20 @@ const GetStartedCallout = ({
           alt=""
           className="brush brush-bottom-left"
           src="/images/components/GetStartedCallout/GetStartedCallout--indigo--brush-bottom-left.png"
+        />
+      </>
+    )}
+    {theme === GET_STARTED_CALLOUT_THEMES.ILLO && (
+      <>
+        <img
+          alt=""
+          className="museum museum-bottom-right"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-bottom-right.png"
+        />
+        <img
+          alt=""
+          className="museum museum-top-left"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-top-left.png"
         />
       </>
     )}

@@ -2,6 +2,9 @@ const footerNav = require('./content/siteMetadata/footerNav')
 const mainNav = require('./content/siteMetadata/mainNav')
 
 module.exports = {
+  flags: {
+    DEV_SSR: false //note: Gatsby is testing something and had automatically set this flat to true. With the flag set to true, CSS styles kept failing in dev mode!!!
+  },
   siteMetadata: {
     title: `Help Scout`,
     description: `Make every customer service interaction a more human one. Use Help Scout. Trusted by over 12,000 businesses in 140 countries. Get started for free.`,
