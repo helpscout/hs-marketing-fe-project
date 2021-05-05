@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import xss from 'xss';
 
-import { ALIGNMENT } from '../../constants'
-
 import Button, { BUTTON_SIZES } from '../Button/Button';
 import Container from '../Container/Container';
 
@@ -22,12 +20,10 @@ import {
 
 const GetStartedCallout = ({
   ctaText = GET_STARTED_DEFAULT_CTA_TEXT,
-  contentAlignment = ALIGNMENT.CENTER,
   theme = GET_STARTED_CALLOUT_THEMES.DEFAULT,
   title = GET_STARTED_DEFAULT_TITLE,
-  noBg = false,
 }) => (
-  <GetStartedCalloutDIV theme={theme} contentAlignment={contentAlignment} noBg={true}>
+  <GetStartedCalloutDIV theme={theme}>
     <Container>
       <GetStartedCalloutContentWrapperDIV>
         <GetStartedCalloutContentDIV>
@@ -53,13 +49,25 @@ const GetStartedCallout = ({
         />
       </>
     )}
+    {theme === GET_STARTED_CALLOUT_THEMES.ILLO && (
+      <>
+        <img
+          alt=""
+          className="museum museum-bottom-right"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-bottom-right.png"
+        />
+        <img
+          alt=""
+          className="museum museum-top-left"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-top-left.png"
+        />
+      </>
+    )}
   </GetStartedCalloutDIV>
 );
 
 GetStartedCallout.propTypes = {
   ctaText: PropTypes.string,
-  contentAlignment: PropTypes.string,
-  noBg: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(GET_STARTED_CALLOUT_THEMES)),
 };
 

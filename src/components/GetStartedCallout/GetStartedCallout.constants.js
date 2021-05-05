@@ -1,6 +1,7 @@
 export const GET_STARTED_CALLOUT_THEMES = {
   DEFAULT: 'DEFAULT',
   INDIGO: 'INDIGO',
+  ILLO: 'ILLO',
 };
 
 

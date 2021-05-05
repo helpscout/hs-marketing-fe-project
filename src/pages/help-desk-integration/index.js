@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ALIGNMENT } from '../../constants';
 import Container from '../../components/Container/Container';
 import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
+import { GET_STARTED_CALLOUT_THEMES } from '../../components/GetStartedCallout/GetStartedCallout.constants.js';
 import Layout from '../../components/Layout/Layout';
 import Seo from '../../components/Seo/Seo';
 
 import SeoImage from '../../../static/images/integrations/seo/screenshot.png';
 import HeroImage from '../../../static/images/integrations/help-desk-integration--hero.png';
-
 
 //might consider adding this as a prop to Layout, since there might be other pages that use this bg
 const GradientBg = styled.div`
@@ -58,7 +57,10 @@ const IntegrationPage = () => {
         <IntegrationCalloutList />
 
       </Container>
-      <GetStartedCallout contentAlignment={ALIGNMENT.LEFT} />
+      <GetStartedCallout 
+        theme={GET_STARTED_CALLOUT_THEMES.ILLO}
+        />
+
     </Layout>
   );
 }

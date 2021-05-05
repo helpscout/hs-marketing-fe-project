@@ -9,6 +9,7 @@ const IntegrationCalloutListDIV = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
+  margin-bottom:110px;
 `;
 
 const IntegrationCalloutList = () => {
