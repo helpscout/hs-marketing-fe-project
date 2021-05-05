@@ -1,58 +1,45 @@
 import styled, { css } from 'styled-components';
 
-import { ButtonA } from '../../Button/Button.styles';
-
 
 import { BREAKPOINTS } from '../../../constants';
 import { getColor, getColumnCSS, getRowCSS } from '../../../utils';
 
 
-export const IntegrationCalloutContentWrapperDIV = styled.div`
-  ${getRowCSS()}
+export const IntegrationCalloutDIV = styled.div`
+  background-color:#fff;
+  width:378px;
+  height:312px;
+  display:flex;
+  flex-direction:column;
+  border-radius:6px;
+  box-shadow: 0px 5px 10px 0px rgba(7, 30, 87, 0.10);
 `;
 
 export const IntegrationCalloutContentDIV = styled.div`
-  ${getColumnCSS({
-    M: 8,
-    L: 6,
-    offsetM: 2,
-    offsetL: 3,
-  })}
-  text-align: center;
-
-  p {
-    color: ${getColor('CHARCOAL', 400)};
-
-    &:last-child {
-      color: ${getColor('CHARCOAL', 500)};
-
-      a {
-        display: inline-block;
-      }
-    }
-  }
-
-  ${ButtonA} {
-    width: 100%;
-    margin: 30px 0;
-
-    @media (min-width: ${BREAKPOINTS.M}) {
-      width: auto;
-    }
-  }
+  margin: 30px 36.5px 0 36.5px;
 `;
 
-export const IntegrationCalloutDIV = styled.div`
-  background-color:#fff;
-  padding: 60px 0;
 
-  @media (min-width: ${BREAKPOINTS.M}) {
-    padding: 80px 0;
-  }
+export const IntegrationCalloutBtnWrapperDIV = styled.div`
+  width:100%;
+  height:auto;
+  flex-grow:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid ${getColor('ASH', 300)};
+  cursor:pointer;
 
+  &:hover {
+      background-color: ${getColor('ASH', 200)};
+    }
 `;
 
 export const IntegrationCalloutBtn = styled.a`
+     font-size: 18px;
+     line-height: 18px;
+     font-weight:500;
+
      /* Caret-down */
      &::after {
         border-top-width: 2px;
@@ -73,3 +60,11 @@ export const IntegrationCalloutBtn = styled.a`
         left: 2px;
       }
 `;
+
+export const PillSPAN = styled.span`
+  width:auto;
+  color:#ffffff;
+  border-radius:2px;
+  padding:3px 4px;
+  background-color: ${getColor('PURPLE', 700)}
+`;  

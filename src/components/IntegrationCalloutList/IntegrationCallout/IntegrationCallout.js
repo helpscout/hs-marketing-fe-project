@@ -1,14 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import xss from 'xss';
-
-import Container from '../../Container/Container';
+import { getColor } from '../../../utils';
 
 import {
   IntegrationCalloutDIV,
-  IntegrationCalloutContentWrapperDIV,
+  IntegrationCalloutBtn,
   IntegrationCalloutContentDIV,
-  IntegrationCalloutBtn
+  IntegrationCalloutBtnWrapperDIV,
+  PillSPAN,
 } from './IntegrationCallout.styles';
 
 
@@ -21,19 +22,21 @@ const IntegrationCallout = ({
 }) => (
 
     <IntegrationCalloutDIV>
-    <Container>
-      <IntegrationCalloutContentWrapperDIV>
-        <IntegrationCalloutContentDIV>
+      <IntegrationCalloutContentDIV>
+          <PillSPAN>PLUS</PillSPAN>
           <h3 dangerouslySetInnerHTML={{ __html: xss(title) }} />
           <p>{img}</p>
           <p>{subtitle}</p>
           <p>{permalink}</p>
-          <IntegrationCalloutBtn href={permalink}>
-            Learn More
-            </IntegrationCalloutBtn>
-        </IntegrationCalloutContentDIV>
-      </IntegrationCalloutContentWrapperDIV>
-    </Container>
+      </IntegrationCalloutContentDIV>
+
+      <IntegrationCalloutBtnWrapperDIV>
+        <IntegrationCalloutBtn href={permalink}>
+          Learn More
+        </IntegrationCalloutBtn>
+      </IntegrationCalloutBtnWrapperDIV>
+
+       
   </IntegrationCalloutDIV> 
 );
 
