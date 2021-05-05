@@ -20,8 +20,7 @@ export const GetStartedCalloutContentDIV = styled.div`
     offsetM: 2,
     offsetL: 3,
   })}
-  text-align: ${props => props.contentAlign || "center"};
-  
+
 
   p {
     color: ${getColor('CHARCOAL', 400)};
@@ -46,8 +45,20 @@ export const GetStartedCalloutContentDIV = styled.div`
 `;
 
 export const GetStartedCalloutDIV = styled.div`
-/*   background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
- */  padding: 60px 0;
+
+   ${({ noBg }) => {
+     if (noBg) return css`
+        background:'none';
+     `
+    return css`
+       background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
+     `
+    }}
+   
+   padding: 60px 0;
+
+   text-align: ${props => props.contentAlignment};
+    border:solid red 1px;
 
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;

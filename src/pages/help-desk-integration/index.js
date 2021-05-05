@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CONTENT_ALIGNMENT } from '../../constants';
+import { ALIGNMENT } from '../../constants';
 import Container from '../../components/Container/Container';
 import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
@@ -38,10 +38,6 @@ const IntegrationPageContentDIV = styled.div`
 `;
 
 
-
-
-
-
 const IntegrationPage = () => {
   return (
     <Layout>
@@ -62,7 +58,7 @@ const IntegrationPage = () => {
         <IntegrationCalloutList />
 
       </Container>
-      <GetStartedCallout contentAlign={CONTENT_ALIGNMENT.LEFT} />
+      <GetStartedCallout contentAlignment={ALIGNMENT.LEFT} />
     </Layout>
   );
 }

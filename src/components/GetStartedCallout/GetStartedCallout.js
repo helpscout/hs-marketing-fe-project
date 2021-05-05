@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import xss from 'xss';
 
+import { ALIGNMENT } from '../../constants'
+
 import Button, { BUTTON_SIZES } from '../Button/Button';
 import Container from '../Container/Container';
 
@@ -17,12 +19,15 @@ import {
   GET_STARTED_DEFAULT_TITLE,
 } from './GetStartedCallout.constants';
 
+
 const GetStartedCallout = ({
   ctaText = GET_STARTED_DEFAULT_CTA_TEXT,
+  contentAlignment = ALIGNMENT.CENTER,
   theme = GET_STARTED_CALLOUT_THEMES.DEFAULT,
   title = GET_STARTED_DEFAULT_TITLE,
+  noBg = false,
 }) => (
-  <GetStartedCalloutDIV theme={theme}>
+  <GetStartedCalloutDIV theme={theme} contentAlignment={contentAlignment} noBg={true}>
     <Container>
       <GetStartedCalloutContentWrapperDIV>
         <GetStartedCalloutContentDIV>
@@ -53,6 +58,8 @@ const GetStartedCallout = ({
 
 GetStartedCallout.propTypes = {
   ctaText: PropTypes.string,
+  contentAlignment: PropTypes.string,
+  noBg: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(GET_STARTED_CALLOUT_THEMES)),
 };
 

@@ -35,7 +35,7 @@ export const FONT_STYLE_BASE_OVERLINE = `
   text-transform: uppercase;
 `
 
-export const CONTENT_ALIGNMENT = `
+export const ALIGNMENT = `
   LEFT: 'LEFT',
   CENTER: 'CENTER',
   RIGHT: 'RIGHT',
