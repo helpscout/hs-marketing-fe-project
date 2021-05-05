@@ -15,21 +15,21 @@ const Help = ({data}) => (
 
 			{/* //make this container flex */}
 			<Container>
-				<div>
+				<div className="parent-flex">
 					{data.allMarkdownRemark.edges.map(({ node }, index) => (
-						<div key={index}>
+						<div className="flex-item" key={index}>
 							<Card title={node.frontmatter.title}
 										slug={node.frontmatter.slug}
 										img= {node.frontmatter.img}
-										permalink={node.frontmatter.title}
-										subtitle={node.frontmatter.title}
+										permalink={node.frontmatter.permalink}
+										subtitle={node.frontmatter.subtitle}
 										/>
 						</div>
 					))}
 				</div>
 			</Container>
 			<Container>
-				<GetStarted/>
+				<GetStarted theme="NEW"/>
 			</Container>
   </Layout>
 );
@@ -37,7 +37,7 @@ const Help = ({data}) => (
 
 export const query = graphql`
   query {
-		allMarkdownRemark {
+		allMarkdownRemark(sort: {fields: frontmatter___title}) {
 			edges {
 				node {
 					id

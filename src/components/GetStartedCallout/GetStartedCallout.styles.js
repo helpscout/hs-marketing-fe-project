@@ -53,8 +53,10 @@ export const GetStartedCalloutDIV = styled.div`
   }
 
   ${({ theme }) => {
+    console.log(theme);
     switch (theme) {
-      case GET_STARTED_CALLOUT_THEMES.INDIGO:
+
+      case "INDIGO":
         return css`
           position: relative;
           background: linear-gradient(180deg, #F7F9FD 0%, rgba(247, 249, 253, 0) 100%);
@@ -79,6 +81,47 @@ export const GetStartedCalloutDIV = styled.div`
             &.brush-bottom-left {
               bottom: 0;
               left: 0;
+            }
+          }
+        `;
+        case "NEW":
+          return css`
+          position: relative;
+          background: none;
+          @media (min-width: ${BREAKPOINTS.M}) {
+            padding: 120px 0;
+          }
+          ${GetStartedCalloutContentWrapperDIV} {
+            position: relative;
+            z-index: 1;
+            div{
+              margin-left:10%;
+              text-align:left;
+            }
+          }
+
+          .cloud {
+            position: absolute !important;
+            z-index: 0;
+            width: 330px;
+            height: 110px;
+
+            &.cloud-top-left {
+              top: 29px;
+              left: 38px;
+            }
+          }
+          .hill {
+            position: absolute !important;
+            z-index: 0;
+            width: 50%;
+            height: 100%;
+            width: 785px;
+            height: 491px;
+
+            &.hill-bottom-right {
+              top: 0;
+              right: 0;
             }
           }
         `;

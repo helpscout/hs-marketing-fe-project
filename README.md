@@ -96,3 +96,18 @@ npm start
 ```
 
 Visit the dev site at [http://localhost:8000/](http://localhost:8000/).
+
+
+
+## Additions 🕹
+
+added gatsby bootstrap to help with layout and grid alignment
+created Hero component made it responsive
+used existing layout to bring header and footer into the page
+made graphQL query to populate middle section with data
+created card component populated by gatsby-transformer-remark 
+made card component reponsive
+created new theme for get started section
+made new theme responsive
+
+

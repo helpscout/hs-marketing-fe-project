@@ -19,7 +19,7 @@ import {
 
 const GetStartedCallout = ({
   ctaText = GET_STARTED_DEFAULT_CTA_TEXT,
-  theme = GET_STARTED_CALLOUT_THEMES.DEFAULT,
+  theme = GET_STARTED_CALLOUT_THEMES,
   title = GET_STARTED_DEFAULT_TITLE,
 }) => (
   <GetStartedCalloutDIV theme={theme}>
@@ -45,6 +45,20 @@ const GetStartedCallout = ({
           alt=""
           className="brush brush-bottom-left"
           src="/images/components/GetStartedCallout/GetStartedCallout--indigo--brush-bottom-left.png"
+        />
+      </>
+    )}
+    {theme === "NEW" && (
+      <>
+        <img
+          alt=""
+          className="hill hill-bottom-right"
+          src="/images/components/GetStartedCallout/GetStartedCallout--new-peeps-bg.png" 
+        />
+        <img
+          alt=""
+          className="cloud cloud-top-left"
+          src="/images/components/GetStartedCallout/GetStartedCallout--new-clouds-bg.png"
         />
       </>
     )}

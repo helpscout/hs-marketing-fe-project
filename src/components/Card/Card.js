@@ -1,25 +1,21 @@
 import React from 'react';
-import Container from '../Container/Container';
 import Badge from '../Badge/Badge';
 
-const Card = (props) => (
- <Container>
-		<div class="card" >
-		<div class="card-body">
-			<h5 class="card-title">Card title</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+const Card = ({title,slug,img,permalink,subtitle}) => (
+	<div className="card text-center">
+		<div className="card-header">
+			<Badge>Plus</Badge>
 		</div>
-		<ul class="list-group list-group-flush">
-			<li class="list-group-item">Cras justo odio</li>
-			<li class="list-group-item">Dapibus ac facilisis in</li>
-			<li class="list-group-item">Vestibulum at eros</li>
-		</ul>
-		<div class="card-body">
-			<a href="#" class="card-link">Card link</a>
-			<a href="#" class="card-link">Another link</a>
+		<div className="card-body">
+			<div>
+				<img alt="" className="brand-image" src={img}/>
+			</div>
+			<p className="card-text">{subtitle}</p>
+		</div>
+		<div className="card-footer text-muted">
+			<a className="card-link" href={permalink}>Learn More &gt; </a>
 		</div>
 	</div>
- </Container>
 );
 
 export default Card;
