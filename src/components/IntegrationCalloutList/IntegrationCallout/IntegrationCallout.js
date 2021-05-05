@@ -8,7 +8,9 @@ import {
   IntegrationCalloutDIV,
   IntegrationCalloutBtn,
   IntegrationCalloutContentDIV,
+  IntegrationCalloutImgWrapper,
   IntegrationCalloutBtnWrapperDIV,
+  PillWrapperDIV,
   PillSPAN,
 } from './IntegrationCallout.styles';
 
@@ -21,23 +23,25 @@ const IntegrationCallout = ({
   title
 }) => (
 
-    <IntegrationCalloutDIV>
-      <IntegrationCalloutContentDIV>
-          <PillSPAN>PLUS</PillSPAN>
-          <h3 dangerouslySetInnerHTML={{ __html: xss(title) }} />
-          <p>{img}</p>
-          <p>{subtitle}</p>
-          <p>{permalink}</p>
-      </IntegrationCalloutContentDIV>
+      <IntegrationCalloutDIV>
+        <IntegrationCalloutContentDIV>
+            <PillWrapperDIV>
+              <PillSPAN>PLUS</PillSPAN>
+            </PillWrapperDIV>
+            
+            <IntegrationCalloutImgWrapper>
+              <img src={img} alt={title} />
+            </IntegrationCalloutImgWrapper>
+            
+            <p>{subtitle}</p>
+        </IntegrationCalloutContentDIV>
 
-      <IntegrationCalloutBtnWrapperDIV>
-        <IntegrationCalloutBtn href={permalink}>
-          Learn More
-        </IntegrationCalloutBtn>
-      </IntegrationCalloutBtnWrapperDIV>
-
-       
-  </IntegrationCalloutDIV> 
+        <IntegrationCalloutBtnWrapperDIV className="btn-wrapper">
+          <IntegrationCalloutBtn href={permalink}>
+            Learn More
+          </IntegrationCalloutBtn>
+        </IntegrationCalloutBtnWrapperDIV>
+      </IntegrationCalloutDIV> 
 );
 
 IntegrationCallout.propTypes = {

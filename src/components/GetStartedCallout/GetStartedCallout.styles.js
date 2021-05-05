@@ -20,7 +20,8 @@ export const GetStartedCalloutContentDIV = styled.div`
     offsetM: 2,
     offsetL: 3,
   })}
-  text-align: center;
+  text-align: ${props => props.contentAlign || "center"};
+  
 
   p {
     color: ${getColor('CHARCOAL', 400)};

@@ -6,8 +6,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import IntegrationCallout from './IntegrationCallout/IntegrationCallout'
 
 const IntegrationCalloutListDIV = styled.div`
-  border: solid red 2px;  
   display:flex;
+  align-items:center;
+  justify-content:space-between;
 `;
 
 const IntegrationCalloutList = () => {
@@ -35,8 +36,8 @@ const IntegrationCalloutList = () => {
 
     return (
         <IntegrationCalloutListDIV>
-        {
-            node.map(({ node }) => {
+        { // not sure if brand order matters, but reverse array to match design order
+            node.reverse().map(({ node }) => {
                 const {img, permalink, slug, title, subtitle} = node.frontmatter;
                 return <IntegrationCallout
                     key={slug}

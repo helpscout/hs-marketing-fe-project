@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-
+import { CONTENT_ALIGNMENT } from '../../constants';
 import Container from '../../components/Container/Container';
 import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
@@ -28,8 +27,8 @@ const IntegrationHeroBg = styled.div`
   position:absolute;
   top:0;
   right:0;
-  background:url(${HeroImage}) no-repeat right top;
-  background-size: 50%;
+  background:url(${HeroImage}) no-repeat 122% top;
+  background-size: 60%;
 `;
 
 const IntegrationPageContentDIV = styled.div`
@@ -39,9 +38,7 @@ const IntegrationPageContentDIV = styled.div`
 `;
 
 
-const IntegrationCalloutsDIV = styled.div`
-  border: solid red 2px;  
-`;
+
 
 
 
@@ -62,11 +59,10 @@ const IntegrationPage = () => {
         </IntegrationPageContentDIV>
         
 
-        <IntegrationCalloutsDIV>
-          <IntegrationCalloutList />
-        </IntegrationCalloutsDIV>
+        <IntegrationCalloutList />
+
       </Container>
-      <GetStartedCallout />
+      <GetStartedCallout contentAlign={CONTENT_ALIGNMENT.LEFT} />
     </Layout>
   );
 }
