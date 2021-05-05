@@ -18,7 +18,6 @@ const IntegrationCardListDIV = styled.div`
     flex-direction:column;
     margin-bottom:40px;
   }
-
 `;
 
 const IntegrationCardList = () => {
@@ -47,7 +46,7 @@ const IntegrationCardList = () => {
     return (
         <IntegrationCardListDIV>
         { // not sure if brand order matters, but reverse array to match design order
-            node.reverse().map(({ node }) => {
+            node.map(({ node }) => {
                 const {img, permalink, slug, title, subtitle} = node.frontmatter;
                 return <IntegrationCard
                     key={slug}
