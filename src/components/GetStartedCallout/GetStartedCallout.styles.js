@@ -47,7 +47,7 @@ export const GetStartedCalloutContentDIV = styled.div`
 export const GetStartedCalloutDIV = styled.div`
   background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
   padding: 60px 0;
-
+  
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;
   }
@@ -89,11 +89,16 @@ export const GetStartedCalloutDIV = styled.div`
           position: relative;
           background: none;
           @media (min-width: ${BREAKPOINTS.M}) {
-            padding: 120px 0;
-          }
+            // padding: 120px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 -15px;
+          
           ${GetStartedCalloutContentWrapperDIV} {
             position: relative;
             z-index: 1;
+            
             div{
               margin-left:10%;
               text-align:left;
@@ -105,9 +110,17 @@ export const GetStartedCalloutDIV = styled.div`
             z-index: 0;
             width: 330px;
             height: 110px;
-
+            
             &.cloud-top-left {
               top: 29px;
+              left: 38px;
+            }
+            @media (min-width: ${BREAKPOINTS.M}) {
+              position: absolute !important;
+              z-index: 0;
+              width: 330px;
+              height: 110px;
+              top: -41px;
               left: 38px;
             }
           }
@@ -122,6 +135,17 @@ export const GetStartedCalloutDIV = styled.div`
             &.hill-bottom-right {
               top: 0;
               right: 0;
+            }
+            @media (min-width: ${BREAKPOINTS.M}) {
+              position: relative;
+              z-index: 0;
+              width: 50%;
+              height: 100%;
+              width: 465px;
+              height: 360px;
+              top: 0;
+              right: 0;
+            
             }
           }
         `;

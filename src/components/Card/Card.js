@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../Badge/Badge';
+import './Styles/Card.css'
 
 const Card = ({title,slug,img,permalink,subtitle}) => (
 	<div className="card text-center">
@@ -7,10 +8,10 @@ const Card = ({title,slug,img,permalink,subtitle}) => (
 			<Badge>Plus</Badge>
 		</div>
 		<div className="card-body">
-			<div>
+			<div className="card-inner">
 				<img alt="" className="brand-image" src={img}/>
-			</div>
-			<p className="card-text">{subtitle}</p>
+				<p className="card-text">{subtitle}</p>
+			</div>	
 		</div>
 		<div className="card-footer text-muted">
 			<a className="card-link" href={permalink}>Learn More &gt; </a>
