@@ -118,7 +118,7 @@ export const GetStartedCalloutDIV = styled.div`
            
             &.museum-top-left {
               top: 0;
-              left: 0;
+              left: 2%;
               width:25%;
               @media (max-width: ${BREAKPOINTS.M}) {
                 left:4%
