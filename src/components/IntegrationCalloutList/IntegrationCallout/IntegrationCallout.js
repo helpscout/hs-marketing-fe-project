@@ -28,8 +28,8 @@ const IntegrationCallout = ({
           <p>{img}</p>
           <p>{subtitle}</p>
           <p>{permalink}</p>
-          <IntegrationCalloutBtn href="#">
-            Learn More [side arrow]
+          <IntegrationCalloutBtn href={permalink}>
+            Learn More
             </IntegrationCalloutBtn>
         </IntegrationCalloutContentDIV>
       </IntegrationCalloutContentWrapperDIV>

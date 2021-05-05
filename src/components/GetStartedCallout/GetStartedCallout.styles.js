@@ -45,8 +45,8 @@ export const GetStartedCalloutContentDIV = styled.div`
 `;
 
 export const GetStartedCalloutDIV = styled.div`
-  background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
-  padding: 60px 0;
+/*   background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
+ */  padding: 60px 0;
 
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;

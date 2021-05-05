@@ -69,7 +69,7 @@ export const IntegrationCalloutBtn = styled.a`
         transform: rotate(40deg);
         transition: all 0.15s;
         vertical-align: middle;
-        top: -2px;
+        top: -1.5px;
         left: 2px;
       }
 `;
