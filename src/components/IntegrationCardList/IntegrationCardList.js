@@ -5,9 +5,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { BREAKPOINTS } from '../../constants';
 
 
-import IntegrationCallout from './IntegrationCallout/IntegrationCallout'
+import IntegrationCard from './IntegrationCard/IntegrationCard'
 
-const IntegrationCalloutListDIV = styled.div`
+const IntegrationCardListDIV = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -22,10 +22,10 @@ const IntegrationCalloutListDIV = styled.div`
 
 `;
 
-const IntegrationCalloutList = () => {
+const IntegrationCardList = () => {
     // assume that we will have more markdown data than just what is related to the integrations page down the road
     const { allMarkdownRemark: { edges:  node  } } = useStaticQuery(graphql`
-        query IntegrationCalloutListQuery {
+        query IntegrationCardListQuery {
             allMarkdownRemark(
               filter: {frontmatter: {permalink: {regex: "/help-desk-integration/"}}}
             ) {
@@ -46,11 +46,11 @@ const IntegrationCalloutList = () => {
 
 
     return (
-        <IntegrationCalloutListDIV>
+        <IntegrationCardListDIV>
         { // not sure if brand order matters, but reverse array to match design order
             node.reverse().map(({ node }) => {
                 const {img, permalink, slug, title, subtitle} = node.frontmatter;
-                return <IntegrationCallout
+                return <IntegrationCard
                     key={slug}
                     img={img}
                     permalink={permalink}
@@ -60,8 +60,8 @@ const IntegrationCalloutList = () => {
                 />  
             })
         }
-        </IntegrationCalloutListDIV>
+        </IntegrationCardListDIV>
     );
 }
 
-export default IntegrationCalloutList;
+export default IntegrationCardList;

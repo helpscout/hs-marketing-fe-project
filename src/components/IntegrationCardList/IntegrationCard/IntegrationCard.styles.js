@@ -6,7 +6,7 @@ import { getColor } from '../../../utils';
 
 
 
-export const IntegrationCalloutDIV = styled.div`
+export const IntegrationCardDIV = styled.div`
   max-width:378px;
   width:30%;
   height:312px;
@@ -69,7 +69,7 @@ export const IntegrationCalloutDIV = styled.div`
 
 `;
 
-export const IntegrationCalloutContentDIV = styled.div`
+export const IntegrationCardContentDIV = styled.div`
   flex-grow:1;
 
   margin: 20px 36.5px 0 36.5px;
@@ -93,7 +93,7 @@ export const PillSPAN = styled.span`
 `;  
 
 
-export const IntegrationCalloutImgWrapper = styled.div`
+export const IntegrationCardImgWrapper = styled.div`
   width:184px;
   height:100px;
   margin:0 auto 10px auto;
@@ -120,7 +120,7 @@ export const IntegrationCalloutImgWrapper = styled.div`
 `;
 
 
-export const IntegrationCalloutBtnWrapperDIV = styled.div`
+export const IntegrationCardBtnWrapperDIV = styled.div`
   width:100%;
   height:58px;
   border-top: 1px solid ${getColor('ASH', 300)};
@@ -129,7 +129,7 @@ export const IntegrationCalloutBtnWrapperDIV = styled.div`
   }
 `;
 
-export const IntegrationCalloutBtn = styled.a`
+export const IntegrationCardBtn = styled.a`
     font-size: 18px;
     line-height: 18px;
     font-weight:500;

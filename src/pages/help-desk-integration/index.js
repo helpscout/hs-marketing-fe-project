@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from '../../components/Container/Container';
 import { BREAKPOINTS } from '../../constants';
-import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
+import IntegrationCardList from '../../components/IntegrationCardList/IntegrationCardList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
 import { GET_STARTED_CALLOUT_THEMES } from '../../components/GetStartedCallout/GetStartedCallout.constants.js';
 import Layout from '../../components/Layout/Layout';
@@ -35,6 +35,9 @@ const IntegrationHeroBg = styled.div`
   @media (max-width: ${BREAKPOINTS.L}) {
     display:none;
   }
+   @media (min-width: 1600px) {
+    background-size: 50%;
+  } 
 `;
 
 const IntegrationPageContentDIV = styled.div`
@@ -65,7 +68,7 @@ const IntegrationPage = () => {
         </IntegrationPageContentDIV>
         
 
-        <IntegrationCalloutList />
+        <IntegrationCardList />
 
       </Container>
       <GetStartedCallout 
