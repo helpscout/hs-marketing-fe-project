@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from '../../components/Container/Container';
+import IntegrationCalloutList from '../../components/IntegrationCalloutList/IntegrationCalloutList';
 import GetStartedCallout from '../../components/GetStartedCallout/GetStartedCallout';
 import Layout from '../../components/Layout/Layout';
 import Seo from '../../components/Seo/Seo';
@@ -15,21 +16,31 @@ const IntegrationPageContentDIV = styled.div`
   border:solid red 2px;
 `;
 
-const IntegrationPage = () => (
-  <Layout>
-     <Seo
-      description="This is the Help Scout home page"
-      title="Help Scout | Home Page"
-      image={SeoImage}
-    />
-    <Container>
-      <IntegrationPageContentDIV>
-        <h1 className="display">Simplified customer&nbsp;service</h1>
-        <p className="text-large">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-      </IntegrationPageContentDIV>
-    </Container>
-    <GetStartedCallout />
-  </Layout>
-);
+const IntegrationCalloutsDIV = styled.div`
+  border: solid red 2px;  
+`;
+
+const IntegrationPage = () => {
+  return (
+    <Layout>
+      <Seo
+        description="This is the Help Scout integrations page"
+        title="Help Scout | Integrations"
+        image={SeoImage}
+      />
+      <Container>
+        <IntegrationPageContentDIV>
+          <h1 className="display">Help Scout, supercharged</h1>
+          <p className="text-large">The tools you love, together with Help Scout.</p>
+        </IntegrationPageContentDIV>
+
+        <IntegrationCalloutsDIV>
+          <IntegrationCalloutList />
+        </IntegrationCalloutsDIV>
+      </Container>
+      <GetStartedCallout />
+    </Layout>
+  );
+}
 
 export default IntegrationPage;
