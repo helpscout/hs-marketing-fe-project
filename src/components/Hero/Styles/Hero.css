@@ -1,0 +1,14 @@
+.background-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.background-image {
+    display:block
+}
+
+@media (max-width: 991px) {
+    .background-image {
+       display:none;
+    }
+}

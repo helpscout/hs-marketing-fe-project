@@ -6,6 +6,7 @@ import Fonts from './Fonts/Fonts';
 import ResetStyles from './_reset';
 import TypographyStyles from './_typography';
 import FormsStyles from './_forms';
+import './styles.css'
 
 const GlobalStylesComponent = createGlobalStyle`
   ${ResetStyles}

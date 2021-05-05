@@ -8,12 +8,14 @@ const GlobalStylesAMPCSS = css`
   html,
   body {
     margin: 0;
+    background: linear-gradient(180deg, #F9F9FF 20.69%, rgba(249, 249, 255, 0) 100%);
     color: ${getColor('CHARCOAL', 500)};
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 105%;
     line-height: 1.6;
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+    
   }
 
   h1, h2, h3, h4, h5 {
