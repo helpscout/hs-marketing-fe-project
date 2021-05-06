@@ -21,7 +21,9 @@ export const GetStartedCalloutContentDIV = styled.div`
     offsetL: 3,
   })}
   text-align: center;
-
+  @media (max-width: ${BREAKPOINTS.L}) {
+    height: 561px;  
+  }
   p {
     color: ${getColor('CHARCOAL', 400)};
 
@@ -41,19 +43,19 @@ export const GetStartedCalloutContentDIV = styled.div`
     @media (min-width: ${BREAKPOINTS.M}) {
       width: auto;
     }
+    
   }
 `;
 
 export const GetStartedCalloutDIV = styled.div`
   background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
   padding: 60px 0;
-  
+  padding-bottom:0px;
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;
   }
 
   ${({ theme }) => {
-    console.log(theme);
     switch (theme) {
 
       case "INDIGO":
@@ -84,21 +86,22 @@ export const GetStartedCalloutDIV = styled.div`
             }
           }
         `;
+
+        // NEW THEME 
         case "NEW":
           return css`
           position: relative;
           background: none;
           @media (min-width: ${BREAKPOINTS.M}) {
-            // padding: 120px 0;
+            padding: 120px 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             margin: 0 -15px;
-          
+          }
           ${GetStartedCalloutContentWrapperDIV} {
             position: relative;
             z-index: 1;
-            
             div{
               margin-left:10%;
               text-align:left;
@@ -110,18 +113,14 @@ export const GetStartedCalloutDIV = styled.div`
             z-index: 0;
             width: 330px;
             height: 110px;
-            
+
             &.cloud-top-left {
               top: 29px;
               left: 38px;
-            }
-            @media (min-width: ${BREAKPOINTS.M}) {
-              position: absolute !important;
-              z-index: 0;
-              width: 330px;
-              height: 110px;
-              top: -41px;
-              left: 38px;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                top: -41px;
+                left: 6px;
+              }
             }
           }
           .hill {
@@ -131,21 +130,22 @@ export const GetStartedCalloutDIV = styled.div`
             height: 100%;
             width: 785px;
             height: 491px;
-
+            @media (max-width: ${BREAKPOINTS.M}) {
+              width: 465px;
+              height: 296px; 
+            }
+            
             &.hill-bottom-right {
               top: 0;
               right: 0;
-            }
-            @media (min-width: ${BREAKPOINTS.M}) {
-              position: relative;
-              z-index: 0;
-              width: 50%;
-              height: 100%;
-              width: 465px;
-              height: 360px;
-              top: 0;
-              right: 0;
-            
+              @media (max-width: ${BREAKPOINTS.M}) {
+                top: 325px;
+                right: -30px;
+              }
+              @media (min-width: ${BREAKPOINTS.M}) and (max-width: ${BREAKPOINTS.L})  {
+                top: 310px;
+                right: -23px;
+              }
             }
           }
         `;
