@@ -163,7 +163,7 @@ export const GetStartedCalloutDIV = styled.div`
             }
             
             &.hill-bottom-right {
-              top: -33px;
+              top: 27px;
               right: 0;
               @media (max-width: ${BREAKPOINTS.M}) {
                 top: 392px;
@@ -174,8 +174,8 @@ export const GetStartedCalloutDIV = styled.div`
                 right: -21px;
               }
               @media(min-width: ${BREAKPOINTS.M}){
-                width: 785px;
-                height: 491px;
+                width: 685px;
+                height: 431px;
               }
             }
           }
