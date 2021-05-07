@@ -27,6 +27,7 @@ const PageContentDIVLeft = styled.div`
 		
 		@media (max-width: ${BREAKPOINTS.M }) {
 			font-size:36px;
+			width: 325px;
 		}
 		@media (min-width: ${BREAKPOINTS.M}) {
 			font-size:46px
@@ -37,6 +38,7 @@ const PageContentDIVLeft = styled.div`
 		@media (min-width: ${BREAKPOINTS.L }) {
 			font-size:60px;
 			width: 575px;
+			margin-top: 80px;
 		}
 	}
 	.text-large {
@@ -48,7 +50,7 @@ const PageContentDIVLeft = styled.div`
 		line-height: 38px;
 		color:#556575;
 		@media (max-width: ${BREAKPOINTS.M -1}) {
-			font-size: 22px;
+			font-size: 24px;
 			width:325px;
 		  }
 		}

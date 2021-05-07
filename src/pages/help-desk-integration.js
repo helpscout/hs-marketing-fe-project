@@ -15,7 +15,7 @@ const Help = ({data}) => (
 
 			{/* //make this container flex */}
 			<Container>
-				<div className="parent-flex">
+				<div className="parent-flex card-parent">
 					{data.allMarkdownRemark.edges.map(({ node }, index) => (
 						<div className="flex-item" key={index}>
 							<Card title={node.frontmatter.title}
