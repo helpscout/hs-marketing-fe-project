@@ -47,7 +47,6 @@ export const getRowCSS = () => css`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 -15px;
 `;
 
 // Get column width as a %

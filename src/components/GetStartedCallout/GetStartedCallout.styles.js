@@ -92,19 +92,32 @@ export const GetStartedCalloutDIV = styled.div`
           return css`
           position: relative;
           background: none;
+          
           @media (min-width: ${BREAKPOINTS.M}) {
             padding: 120px 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin: 0 -15px;
+            margin: -33px -84px;
+            margin-right: -10px;
           }
           ${GetStartedCalloutContentWrapperDIV} {
             position: relative;
             z-index: 1;
+            @media (max-width: ${BREAKPOINTS.M}) {
+              margin-left: -30px;
+              margin-right: -40px;
+            }
+            @media(min-width: ${BREAKPOINTS.M}){
+              margin-left: -180px;
+              width: 1270px;
+            }
             div{
-              margin-left:10%;
               text-align:left;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                display:block;
+                
+              }
             }
           }
 
@@ -113,13 +126,19 @@ export const GetStartedCalloutDIV = styled.div`
             z-index: 0;
             width: 330px;
             height: 110px;
+            @media (max-width: ${BREAKPOINTS.M}) {
+              width: 175px;
+              height: 58px;
+              
+            }
 
             &.cloud-top-left {
               top: 29px;
               left: 38px;
               @media (max-width: ${BREAKPOINTS.M}) {
                 top: -41px;
-                left: 6px;
+                left: -7px;
+
               }
             }
           }
@@ -128,23 +147,35 @@ export const GetStartedCalloutDIV = styled.div`
             z-index: 0;
             width: 50%;
             height: 100%;
-            width: 785px;
-            height: 491px;
+            
             @media (max-width: ${BREAKPOINTS.M}) {
-              width: 465px;
-              height: 296px; 
+              width: 379px;
+              height: 229px;
+            }
+            @media (min-width: ${BREAKPOINTS.M}) and (max-width: ${BREAKPOINTS.L})  {
+              width: 379px;
+              height: 229px;
+            }
+
+            @media(min-width: ${BREAKPOINTS.L}){
+              width: 785px;
+              height: 491px;
             }
             
             &.hill-bottom-right {
-              top: 0;
+              top: -33px;
               right: 0;
               @media (max-width: ${BREAKPOINTS.M}) {
-                top: 325px;
+                top: 392px;
                 right: -30px;
               }
               @media (min-width: ${BREAKPOINTS.M}) and (max-width: ${BREAKPOINTS.L})  {
-                top: 310px;
-                right: -23px;
+                top: 282px;
+                right: -21px;
+              }
+              @media(min-width: ${BREAKPOINTS.M}){
+                width: 785px;
+                height: 491px;
               }
             }
           }
