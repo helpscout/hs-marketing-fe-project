@@ -1,3 +1,36 @@
+
+
+## ADRIAN MOJICA WORK NOTES
+## Additions and Changes🕹
+
+As I worked on this project I made some additions and changes.
+- added gatsby bootstrap to help with layout and grid alignment I believe Bootstrap can be of some help when using simple components as well as making use of the grid system and basic styling.
+
+- Created a Hero component and made it responsive
+I created a Hero component that is reusable and responsive. Each new component I worked on
+has a folder with its styles and assets
+
+- Used existing layout to bring header and footer into the page
+Reusing the header , layout and footer components helped me see and understand the breakpoints the website is using as well as the structure the website is supposed to have.
+
+- made graphQL query to populate middle section with data
+at a page level, on the help-desk-integration page I made a graphQL query that will return the data from the files provided. this data will be passed to a card component that will render the cards with the appropriate data. This cards are styled with flex to have an even distribution of the components on page. 
+
+- created card component populated by gatsby-transformer-remark 
+- made card component reponsive
+- created new theme for get started section
+This probably took the longes since I had to understand how the previous code worked. 
+I created a new theme fot the las component in the page. when provided as theme=new the new theme will display the data and the images corresponding to the new design.
+- made new theme responsive
+
+This project's timing was in around 6 hours, what I wished I could explore more given more time:
+
+- create some tests to make sure that the right data is being gathered and passed into the components. I would probably implement something with Jasmine.
+- a more closer look into a visual QA to iron out some quirks.
+- Devices test. I would love to test this in different devices to make sure that the page renders appropriately.
+
+
+
 # hs-marketing-fe-project
 
 > Front-end Engineer Hiring Project (Brand Design Team)

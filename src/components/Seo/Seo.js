@@ -20,19 +20,19 @@ const Seo = ({
     <meta name="robots" content={robots} />
     <meta name="description" content={description} />
     <meta name="author" content="Help Scout"/>
-    {image && <meta name="thumbnail" content={image} />}
+    {/* {image && <meta name="thumbnail" content={image} />} */}
 
     {/* Facebook */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    {image && <meta property="og:image" content={image} />}
+    {/* {image && <meta property="og:image" content={image} />} */}
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@helpscout" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {image && <meta name="twitter:image" content={image} />}
+    {/* {image && <meta name="twitter:image" content={image} />} */}
   </Helmet>
 )
 

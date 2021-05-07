@@ -21,7 +21,9 @@ export const GetStartedCalloutContentDIV = styled.div`
     offsetL: 3,
   })}
   text-align: center;
-
+  @media (max-width: ${BREAKPOINTS.L}) {
+    height: 561px;  
+  }
   p {
     color: ${getColor('CHARCOAL', 400)};
 
@@ -41,20 +43,22 @@ export const GetStartedCalloutContentDIV = styled.div`
     @media (min-width: ${BREAKPOINTS.M}) {
       width: auto;
     }
+    
   }
 `;
 
 export const GetStartedCalloutDIV = styled.div`
   background: ${getColor('BLUE', 100)} url(${WhiteBrushBG}) bottom center no-repeat;
   padding: 60px 0;
-
+  padding-bottom:0px;
   @media (min-width: ${BREAKPOINTS.M}) {
     padding: 80px 0;
   }
 
   ${({ theme }) => {
     switch (theme) {
-      case GET_STARTED_CALLOUT_THEMES.INDIGO:
+
+      case "INDIGO":
         return css`
           position: relative;
           background: linear-gradient(180deg, #F7F9FD 0%, rgba(247, 249, 253, 0) 100%);
@@ -79,6 +83,100 @@ export const GetStartedCalloutDIV = styled.div`
             &.brush-bottom-left {
               bottom: 0;
               left: 0;
+            }
+          }
+        `;
+
+        // NEW THEME 
+        case "NEW":
+          return css`
+          position: relative;
+          background: none;
+          
+          @media (min-width: ${BREAKPOINTS.M}) {
+            padding: 120px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: -33px -84px;
+            margin-right: -10px;
+          }
+          ${GetStartedCalloutContentWrapperDIV} {
+            position: relative;
+            z-index: 1;
+            @media (max-width: ${BREAKPOINTS.M}) {
+              margin-left: -30px;
+              margin-right: -40px;
+            }
+            @media(min-width: ${BREAKPOINTS.M}){
+              margin-left: -180px;
+              width: 1270px;
+            }
+            div{
+              text-align:left;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                display:block;
+                
+              }
+            }
+          }
+
+          .cloud {
+            position: absolute !important;
+            z-index: 0;
+            width: 330px;
+            height: 110px;
+            @media (max-width: ${BREAKPOINTS.M}) {
+              width: 175px;
+              height: 58px;
+              
+            }
+
+            &.cloud-top-left {
+              top: 29px;
+              left: 38px;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                top: -41px;
+                left: -7px;
+
+              }
+            }
+          }
+          .hill {
+            position: absolute !important;
+            z-index: 0;
+            width: 50%;
+            height: 100%;
+            
+            @media (max-width: ${BREAKPOINTS.M}) {
+              width: 379px;
+              height: 229px;
+            }
+            @media (min-width: ${BREAKPOINTS.M}) and (max-width: ${BREAKPOINTS.L})  {
+              width: 379px;
+              height: 229px;
+            }
+
+            @media(min-width: ${BREAKPOINTS.L}){
+              width: 785px;
+              height: 491px;
+            }
+            
+            &.hill-bottom-right {
+              top: 27px;
+              right: -160px;
+              @media (max-width: ${BREAKPOINTS.M}) {
+                top: 392px;
+                right: -30px;
+              }
+              @media (min-width: ${BREAKPOINTS.M}) and (max-width: ${BREAKPOINTS.L})  {
+                top: 282px;
+                right: -21px;
+              }
+              @media(min-width: ${BREAKPOINTS.M}){
+                width: 685px;
+                height: 431px;
+              }
             }
           }
         `;

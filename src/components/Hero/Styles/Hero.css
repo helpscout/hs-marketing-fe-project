@@ -1,0 +1,29 @@
+.background-image{
+    max-width: 891px;
+    height: auto;
+}
+
+.background-image {
+    display:block
+}
+
+.hero {
+    line-height: 110%;
+    font-size: 46px;
+}
+
+.text-large {
+    line-height: 38.4px;
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 38px;
+    color:#556575;
+}
+
+@media (max-width: 991px) {
+    .background-image {
+       display:none;
+    }
+}
