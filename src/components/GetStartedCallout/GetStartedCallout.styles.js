@@ -164,7 +164,7 @@ export const GetStartedCalloutDIV = styled.div`
             
             &.hill-bottom-right {
               top: 27px;
-              right: 0;
+              right: -160px;
               @media (max-width: ${BREAKPOINTS.M}) {
                 top: 392px;
                 right: -30px;
