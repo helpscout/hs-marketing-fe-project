@@ -84,8 +84,14 @@ const DesktopNavItems = [
     ]
   },
   {
-    link: '#',
-    title: 'Blog',
+    title: 'Education',
+    options: [
+      {
+        link: '#',
+        title: 'Item title',
+        description: 'Item description'
+      }
+    ]
   },
   {
     title: 'Pricing',
@@ -110,7 +116,7 @@ const MobileNavItems = {
     },
     {
       link: '#',
-      title: 'Blog',
+      title: 'Education',
     }
   ],
 };
