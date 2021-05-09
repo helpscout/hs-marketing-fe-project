@@ -48,6 +48,20 @@ const GetStartedCallout = ({
         />
       </>
     )}
+    {theme === GET_STARTED_CALLOUT_THEMES.ILLO && (
+      <>
+        <img
+          alt=""
+          className="museum museum-top-left"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-top-left.png"
+        />
+        <img
+          alt=""
+          className="museum museum-bottom-right"
+          src="/images/components/GetStartedCallout/GetStartedCallout--illo-museum-bottom-right.png"
+        />
+      </>
+    )}
   </GetStartedCalloutDIV>
 );
 

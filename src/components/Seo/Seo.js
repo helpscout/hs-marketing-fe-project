@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import favicon from "../../../static/images/favicon.png";
 
 const Seo = ({
   description = '',
@@ -13,6 +14,9 @@ const Seo = ({
       'lang': 'en',
     }}
     title={title}
+    link={[
+      { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+  ]}
   >
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
 

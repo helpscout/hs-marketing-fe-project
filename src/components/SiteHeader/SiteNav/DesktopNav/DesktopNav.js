@@ -15,7 +15,7 @@ const DesktopNav = ({ navItems }) => (
       {navItems.map((navItemProps) => <NavItem key={navItemProps.title} {...navItemProps} />)}
     </SiteNavUL>
     <div>
-      <Button color={BUTTON_COLORS.TRANSPARENT} href="#">Login</Button>
+      <Button color={BUTTON_COLORS.TRANSPARENT} href="#">Get a Demo</Button>
       <Button href="#" id="free-trial-link">Free Trial</Button>
     </div>
   </DesktopNavDIV>

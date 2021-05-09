@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
 
-import { ButtonA } from '../Button/Button.styles';
+import { BREAKPOINTS } from '../../constants';
+import { GET_STARTED_CALLOUT_THEMES } from './GetStartedCallout.constants';
 
+import { ButtonA } from '../Button/Button.styles';
 import WhiteBrushBG from '../../../static/images/components/GetStartedCallout/GetStartedCallout--default-brush-bg.png';
 
-import { BREAKPOINTS } from '../../constants';
-import { getColor, getColumnCSS, getRowCSS } from '../../utils';
 
-import { GET_STARTED_CALLOUT_THEMES } from './GetStartedCallout.constants';
+
+import { getColor, getColumnCSS, getRowCSS } from '../../utils';
 
 export const GetStartedCalloutContentWrapperDIV = styled.div`
   ${getRowCSS()}
@@ -82,6 +83,71 @@ export const GetStartedCalloutDIV = styled.div`
             }
           }
         `;
+      
+        case GET_STARTED_CALLOUT_THEMES.ILLO:
+          return css`
+            position: relative;
+            background: #ffffff none;
+            padding: 100px 0 0;
+
+            @media (min-width: ${BREAKPOINTS.M}){
+              padding: 180px 0;
+            }
+  
+            ${GetStartedCalloutContentWrapperDIV} {
+              position: relative;
+              z-index: 1;
+            }
+
+            ${GetStartedCalloutContentDIV} {
+              text-align: left;
+              ${getColumnCSS({
+                M: 6,
+                L: 6,
+                offsetM: 2,
+                offsetL: 1,
+              })}
+            }
+  
+            .museum {
+              z-index: 0;
+              width: 100%;
+              transition: all 0.25s ease 0s;
+  
+              &.museum-top-left {
+                position: absolute;
+                top: 20px;
+                left: 25px;
+                width: 175px;
+                height: auto;
+                @media (min-width: ${BREAKPOINTS.S}){
+                  left: 45px;
+                }
+                @media (min-width: ${BREAKPOINTS.M}){
+                  width: 330px;
+                  top: 30px;
+                  left: 40px;
+                }
+              }
+  
+              &.museum-bottom-right {
+                position: relative;
+                display: block;
+                margin-left: auto;
+                bottom: 0;
+                right: 0;
+                @media (min-width: ${BREAKPOINTS.S}){
+                  /* width: 60%; uncomment if you want to resize depending on the broswer width */ 
+                  max-width: 460px;
+                }
+                @media (min-width: ${BREAKPOINTS.M}){
+                  position: absolute;
+                  width:50%;
+                  max-width: 785px;
+                }
+              }
+            }
+          `;
 
       default:
         return '';
